@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400..900&family=Lalezar&family=Plus+Jakarta+Sans:ital,wght@0,400..900;1,400..900&family=Unbounded:wght@400..900&display=swap"
+        rel="stylesheet">
+
+    <title>Karim Ahmed | UI/UX Designer & Front-End Developer</title>
+
+    <link rel="shortcut icon" href="icon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon/android-chrome-192x192.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Karim Ahmed">
+    <meta property="og:description" content="UI/UX Designer & Front-End Developer">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <header>
+        <nav class="navbar">
+
+            <a href="javascript:void(0)" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="nav-logo"
+                id="logo" data-key="nav.logo"></a>
+
+            <div class="nav-links">
+                <a href="#projects" data-key="nav.projects"></a>
+                <a href="#education" data-key="nav.education"></a>
+                <a href="#about" data-key="nav.about"></a>
+                <a href="#contact" data-key="nav.contact"></a>
+            </div>
+
+            <div class="nav-btns">
+                <button class="lang-switch" onclick="toggleLanguage()" id="lang-btn" data-key="nav.langBtn"
+                    aria-label="Switch language"></button>
+
+                <a href="karim ahmed cv .pdf" class="cv" target="_blank" data-key="nav.viewCv"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+
+                <div class="hero-text">
+                    <span data-key="hero.greeting" data-aos="fade-up" data-aos-delay="100"
+                        data-aos-mobile="false"></span>
+                    <h1 data-key="hero.name" data-aos="fade-up" data-aos-delay="200" data-aos-mobile="false"></h1>
+                    <h2 data-key="hero.jobTitle" data-aos="fade-up" data-aos-delay="300" data-aos-mobile="false"></h2>
+                    <p data-key="hero.description" data-aos="fade-up" data-aos-delay="400" data-aos-mobile="false"></p>
+
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn-projects" data-key="hero.btnProjects"></a>
+                        <a href="karim ahmed cv .pdf" class="cv-btn" target="_blank" data-key="hero.btnCv"></a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-num" data-key="hero.stat.num1"></div>
+                            <div class="stat-label" data-key="hero.stat.label1"></div>
+                        </div>
+
+                        <div class="stat">
+                            <div class="stat-num" data-key="hero.stat.num2"></div>
+                            <div class="stat-label" data-key="hero.stat.label2"></div>
+                        </div>
+
+                        <div class="stat">
+                            <div class="stat-num" data-key="hero.stat.num3"></div>
+                            <div class="stat-label" data-key="hero.stat.label3"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-img">
+                    <div class="floating-skills" data-aos="fade-up" data-aos-delay="300">
+                        <span class="skill-pill sp1" data-key="hero.skillPill.sp1"></span>
+                        <span class="skill-pill sp2" data-key="hero.skillPill.sp2"></span>
+                        <span class="skill-pill sp3" data-key="hero.skillPill.sp3"></span>
+                    </div>
+                    <div class="hero-img-box" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="img-glow"></div>
+                        <div class="img-decoration"></div>
+                        <img src="imgs/karim-ahmed.webp" alt="" class="custom-img" fetchpriority="high">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="section" data-aos="fade-up">
+            <h2 class="section-title" data-key="projects.title"></h2>
+            <p class="section-intro" data-key="projects.intro"></p>
+
+            <div class="carousel-wrapper">
+
+                <div class="projects-container">
+
+                    <div class="project-card-wrapper" data-aos="fade-up" data-aos-mobile="false">
+                        <article class="project-card">
+                            <div class="project-card-img">
+                                <img src="imgs/project-img-1.webp" alt="" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <h3 data-key="projects.p1.title"></h3>
+                                <p data-key="projects.p1.desc"></p>
+                                <button class="project-card-btn" data-key="projects.p1.btn"
+                                    data-target="#modal-project-1">
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="project-card-wrapper" data-aos="fade-up" data-aos-mobile="false">
+                        <article class="project-card">
+                            <div class="project-card-img">
+                                <img src="imgs/project-img-2.webp" alt="" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <h3 data-key="projects.p2.title"></h3>
+                                <p data-key="projects.p2.desc"></p>
+                                <button class="project-card-btn" data-key="projects.p2.btn"
+                                    data-target="#modal-project-2">
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="project-card-wrapper" data-aos="fade-up" data-aos-mobile="false">
+                        <article class="project-card">
+                            <div class="project-card-img">
+                                <img src="imgs/project-img-3.webp" alt="" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <h3 data-key="projects.p3.title"></h3>
+                                <p data-key="projects.p3.desc"></p>
+                                <a href="#" class="project-card-btn" data-key="projects.p3.btn"></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="project-card-wrapper" data-aos="fade-up" data-aos-mobile="false">
+                        <article class="project-card">
+                            <div class="project-card-img">
+                                <img src="imgs/project-img-4.webp" alt="" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <h3 data-key="projects.p4.title"></h3>
+                                <p data-key="projects.p4.desc"></p>
+                                <a href="#" class="project-card-btn" data-key="projects.p4.btn"></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="project-card-wrapper" data-aos="fade-up" data-aos-mobile="false">
+                        <article class="project-card">
+                            <div class="project-card-img">
+                                <img src="imgs/project-img-5.webp" alt="" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <h3 data-key="projects.p5.title"></h3>
+                                <p data-key="projects.p5.desc"></p>
+                                <a href="#" class="project-card-btn" data-key="projects.p5.btn"></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="project-card-wrapper" data-aos="fade-up" data-aos-mobile="false">
+                        <article class="project-card">
+                            <div class="project-card-img">
+                                <img src="imgs/project-img-6.webp" alt="" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <h3 data-key="projects.p6.title"></h3>
+                                <p data-key="projects.p6.desc"></p>
+                                <a href="#" class="project-card-btn" data-key="projects.p6.btn"></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="project-card-wrapper" data-aos="fade-up" data-aos-mobile="false">
+                        <article class="project-card">
+                            <div class="project-card-img">
+                                <img src="imgs/project-img-7.webp" alt="" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <h3 data-key="projects.p7.title"></h3>
+                                <p data-key="projects.p7.desc"></p>
+                                <a href="#" class="project-card-btn" data-key="projects.p7.btn"></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="project-card-wrapper" data-aos="fade-up" data-aos-mobile="false">
+                        <article class="project-card">
+                            <div class="project-card-img">
+                                <img src="imgs/project-img-8.webp" alt="" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <h3 data-key="projects.p8.title"></h3>
+                                <p data-key="projects.p8.desc"></p>
+                                <a href="#" class="project-card-btn" data-key="projects.p8.btn"></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-dots"></div>
+
+            <div class="projects-actions">
+                <button id="load-more-btn" class="main-action-btn" data-key="projects.loadMoreBtn"></button>
+                <button id="show-less-btn" class="main-action-btn secondary-btn" data-key="projects.showLessBtn"
+                    style="display: none;"></button>
+            </div>
+        </section>
+
+        <section id="process" class="section">
+            <p class="section-intro" data-key="process.intro"></p>
+            <div class="process-container">
+                <div class="process-card" data-aos="fade-right" data-aos-mobile="zoom-in">
+                    <span class="process-num" data-key="process.card1.num"></span>
+                    <div class="process-card-title" data-key="process.card1.title"></div>
+                    <div class="process-sub" data-key="process.card1.sub"></div>
+                    <div class="process-arrow"></div>
+                </div>
+
+                <div class="process-card" data-aos="fade-right" data-aos-delay="500" data-aos-mobile="zoom-in">
+                    <span class="process-num" data-key="process.card2.num"></span>
+                    <div class="process-card-title" data-key="process.card2.title"></div>
+                    <div class="process-sub" data-key="process.card2.sub"></div>
+                    <div class="process-arrow"></div>
+                </div>
+
+                <div class="process-card" data-aos="fade-right" data-aos-delay="1000" data-aos-mobile="zoom-in">
+                    <span class="process-num" data-key="process.card3.num"></span>
+                    <div class="process-card-title" data-key="process.card3.title"></div>
+                    <div class="process-sub" data-key="process.card3.sub"></div>
+                    <div class="process-arrow"></div>
+                </div>
+
+                <div class="process-card" data-aos="fade-right" data-aos-delay="1500" data-aos-mobile="zoom-in">
+                    <span class="process-num" data-key="process.card4.num"></span>
+                    <div class="process-card-title" data-key="process.card4.title"></div>
+                    <div class="process-sub" data-key="process.card4.sub"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2 class="section-title" data-key="education.title"></h2>
+            <p class="section-intro" data-key="education.intro"></p>
+
+            <div class="education-container" data-aos="fade-up">
+                <div class="education-card">
+                    <div class="education-img">
+                        <img src="imgs/karim-ahmed.webp" alt="" data-key="education.image_alt">
+                    </div>
+
+                    <div class="education-details">
+                        <div class="education-header">
+                            <h3 class="education-degree" data-key="education.degree"></h3>
+                            <span class="education-year" data-key="education.year"></span>
+                        </div>
+                        <h4 class="education-institution" data-key="education.institution"></h4>
+                        <p class="education-description" data-key="education.desc"></p>
+                        <p class="education-text-1" data-key="education.text"></p>
+                    </div>
+                </div>
+
+                <div class="education-info">
+                    <p class="education-text2" data-key="education.text2"></p>
+                </div>
+
+                <div class="certs-flex">
+
+                    <div class="cert-card">
+                        <div class="cert-image-container">
+                            <img src="imgs/download(2).png" alt="Google Data Analytics Certificate">
+                            <div class="cert-hover-overlay">
+                                <a href="#" class="view-link" target="_blank">
+                                    <i class="fa-solid fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <p class="cert-name" data-key="certs.cert1.name"></p>
+                            <div class="cert-meta">
+                                <span class="issuer">
+                                    <i class="fa-solid fa-award"></i>
+                                    <span data-key="certs.cert1.issuer"></span>
+                                </span>
+                                <span class="date" data-key="certs.cert1.date"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image-container">
+                            <img src="imgs/download(3).png" alt="Meta Digital Marketing Associate">
+                            <div class="cert-hover-overlay">
+                                <a href="#" class="view-link" target="_blank">
+                                    <i class="fa-solid fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <p class="cert-name" data-key="certs.cert2.name"></p>
+                            <div class="cert-meta">
+                                <span class="issuer">
+                                    <i class="fa-solid fa-award"></i>
+                                    <span data-key="certs.cert2.issuer"></span>
+                                </span>
+                                <span class="date" data-key="certs.cert2.date"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image-container">
+                            <img src="imgs/download(4).png" alt="Microsoft Office Specialist Excel">
+                            <div class="cert-hover-overlay">
+                                <a href="#" class="view-link" target="_blank">
+                                    <i class="fa-solid fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <p class="cert-name" data-key="certs.cert3.name"></p>
+                            <div class="cert-meta">
+                                <span class="issuer">
+                                    <i class="fa-solid fa-award"></i>
+                                    <span data-key="certs.cert3.issuer"></span>
+                                </span>
+                                <span class="date" data-key="certs.cert3.date"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button id="certs-load-more-btn" data-key="certs.certsLoadMoreBtn"></button>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <h2 class="section-title" data-key="about.title" style="margin-bottom: 3rem;"></h2>
+            <div class="about-container" data-aos="fade-up">
+                <div class="about-contant">
+                    <div class="about-text">
+                        <h3 class="about-contant-title" data-key="about.contantTitle"></h3>
+                        <p data-key="about.text1"></p>
+                        <p data-key="about.text2"></p>
+                    </div>
+
+                    <div class="skills-container">
+                        <h4 style="margin-bottom: 1rem;" data-key="skills.title"></h4>
+                        <div class="skills">
+
+                            <div class="skill">
+                                <p data-key="skills.text1"></p>
+                            </div>
+
+                            <div class="skill">
+                                <p data-key="skills.text2"></p>
+                            </div>
+
+                            <div class="skill">
+                                <p data-key="skills.text3"></p>
+                            </div>
+
+                            <div class="skill">
+                                <p data-key="skills.text4"></p>
+                            </div>
+
+                            <div class="skill">
+                                <p data-key="skills.text5"></p>
+                            </div>
+
+                            <div class="skill">
+                                <p data-key="skills.text6"></p>
+                            </div>
+
+                            <div class="skill">
+                                <p data-key="skills.text7"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title" data-key="contact.title"></h2>
+            <p class="section-intro" data-key="contact.intro"></p>
+
+            <div class="contact-container">
+                <form id="my-form" class="contact-form" novalidate>
+
+                    <div class="form-group-input" data-aos="fade-up">
+                        <div class="form-group">
+                            <input id="name-input" type="text" name="name" placeholder="Your Name" autocomplete="name"
+                                required data-key="contact.form.namePlaceholder">
+                        </div>
+
+                        <div class="form-group">
+                            <input id="email-input" type="text" name="email" placeholder="Your Email"
+                                autocomplete="email" required data-key="contact.form.emailPlaceholder">
+                        </div>
+                    </div>
+                    <div class="form-group" data-aos="fade-up">
+                        <textarea id="message-input" name="message" placeholder="Write your message here... " rows="5"
+                            required data-key="contact.form.msgPlaceholder"></textarea>
+                    </div>
+                    <button class="submit-btn" type="submit" data-key="contact.form.submitBtn"></button>
+                    <div id="my-form-status"
+                        style="margin-top: 15px; font-size: 14px; font-weight: bold; text-align: center;">
+                    </div>
+                </form>
+
+                <div class="social-links">
+                    <div class="social-icon-wrapper" data-aos="fade-up" data-aos-delay="100" data-aos-mobile="false">
+                        <a href="#" target="_blank" data-key="contact.social.1"></a>
+                    </div>
+
+                    <div class="social-icon-wrapper" data-aos="fade-up" data-aos-delay="100" data-aos-mobile="false">
+                        <a href="#" target="_blank" data-key="contact.social.2"></a>
+                    </div>
+
+                    <div class="social-icon-wrapper" data-aos="fade-up" data-aos-delay="100" data-aos-mobile="false">
+                        <a href="#" target="_blank" data-key="contact.social.3"></a>
+                    </div>
+
+                    <div class="social-icon-wrapper" data-aos="fade-up" data-aos-delay="100" data-aos-mobile="false">
+                        <a href="#" target="_blank" data-key="contact.social.4"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p class="footer-copyright" data-key="footer.copyright">
+            &copy; <span id="year"></span>
+        </p>
+        <div class="footer-credit">
+            <span data-key="footer.credit"></span>
+            <a href="https://www.facebook.com/profile.php?id=61590842394772" target="_blank" class="credit-link">
+                <span data-key="footer.myName"></span>
+            </a>
+        </div>
+        <div class="fixed-button">
+            <a href="javascript:void(0)" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Up to Home">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- ____________________________________________________________________________________ -->
+
+    <div id="modal-project-1" class="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+
+            <button class="close-modal" aria-label="Close modal">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img src="imgs/project-img-1.webp" alt="Dashboard screenshot" loading="lazy">
+                    <div class="image-text">
+                        <h2 data-key="modals.p1.projectName"></h2>
+                        <span class="image-tag" data-key="modals.p1.imageTag"></span>
+                    </div>
+                </div>
+
+                <div class="modal-cards">
+                    <div class="modal-task-goal">
+                        <div class="modal-card">
+                            <h3 data-key="modals.labels.task"></h3>
+                            <p data-key="modals.p1.task"></p>
+                        </div>
+                        <div class="modal-card">
+                            <h3 data-key="modals.labels.Initiation"></h3>
+                            <p data-key="modals.p1.Initiation"></p>
+                        </div>
+                    </div>
+
+                    <div class="modal-card">
+                        <h3 data-key="modals.labels.process"></h3>
+                        <p data-key="modals.p1.process"></p>
+                    </div>
+
+                    <div class="modal-challenges-solution">
+                        <div class="modal-card">
+                            <h3 data-key="modals.labels.challenges"></h3>
+                            <ul>
+                                <li data-key="modals.p1.challenges.1"></li>
+                                <li data-key="modals.p1.challenges.2"></li>
+                                <li data-key="modals.p1.challenges.3"></li>
+                            </ul>
+                        </div>
+
+                        <div class="modal-card">
+                            <h3 data-key="modals.labels.solution"></h3>
+                            <p data-key="modals.p1.solution"></p>
+                        </div>
+                    </div>
+                    <div class="modal-card">
+                        <h3 data-key="modals.labels.result"></h3>
+                        <p data-key="modals.p1.result"></p>
+                    </div>
+
+                    <div class="tools-btn">
+                        <div class="modal-card-tools">
+                            <h3 data-key="modals.labels.tools"></h3>
+                            <div class="modals-tools">
+                                <span data-key="modals.p1.tool1"></span>
+                                <span data-key="modals.p1.tool2"></span>
+                                <span data-key="modals.p1.tool3"></span>
+                            </div>
+                        </div>
+                        <a href="#" class="project-modal-btn" data-key="modals.previewBtn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-project-2" class="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+
+            <button class="close-modal" aria-label="Close modal">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img src="imgs/project-img-2.webp" alt="Dashboard screenshot" loading="lazy">
+                    <div class="image-text">
+                        <h2 data-key="modals.p2.projectName"></h2>
+                        <span class="image-tag" data-key="modals.p2.imageTag"></span>
+                    </div>
+                </div>
+
+                <div class="modal-cards">
+                    <div class="modal-task-goal">
+                        <div class="modal-card">
+                            <h3 data-key="modals.labels.task"></h3>
+                            <p data-key="modals.p2.task"></p>
+                        </div>
+                        <div class="modal-card">
+                            <h3 data-key="modals.labels.Initiation"></h3>
+                            <p data-key="modals.p2.Initiation"></p>
+                        </div>
+                    </div>
+
+                    <div class="modal-card">
+                        <h3 data-key="modals.labels.process"></h3>
+                        <p data-key="modals.p2.process"></p>
+                    </div>
+
+                    <div class="modal-challenges-solution">
+                        <div class="modal-card">
+                            <h3 data-key="modals.labels.challenges"></h3>
+                            <ul>
+                                <li data-key="modals.p2.challenges.1"></li>
+                                <li data-key="modals.p2.challenges.2"></li>
+                                <li data-key="modals.p2.challenges.3"></li>
+                            </ul>
+                        </div>
+
+                        <div class="modal-card">
+                            <h3 data-key="modals.labels.solution"></h3>
+                            <p data-key="modals.p2.solution"></p>
+                        </div>
+                    </div>
+                    <div class="modal-card">
+                        <h3 data-key="modals.labels.result"></h3>
+                        <p data-key="modals.p2.result"></p>
+                    </div>
+
+                    <div class="tools-btn">
+                        <div class="modal-card-tools">
+                            <h3 data-key="modals.labels.tools"></h3>
+                            <div class="modals-tools">
+                                <span data-key="modals.p2.tool1"></span>
+                                <span data-key="modals.p2.tool2"></span>
+                                <span data-key="modals.p2.tool3"></span>
+                            </div>
+                        </div>
+                        <a href="#" class="project-modal-btn" data-key="modals.previewBtn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
